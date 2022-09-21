@@ -7,6 +7,8 @@ import { IEmitirSom } from "./iEmitirSom";
 import { ISubirArvores } from "./iSubirArvores";
 
 const cavalo: Cavalo = new Cavalo('Ronaldo', 5, true);
+const cachorro: Cachorro = new Cachorro('Robson', 5, true);
+const preguica: Preguica = new Preguica('ligeirinho', 5, true);
 
 function emitirsom(Animal: IEmitirSom){
    Animal.emitirSom();
@@ -19,5 +21,12 @@ function subirArvore(Animal: ISubirArvores){
 }
 
 emitirsom(cavalo);
-emitirsom(Cachorro);
-emitirsom(Preguica);
+correr(cavalo);
+console.log();
+
+emitirsom(cachorro);
+correr(cachorro);
+console.log();
+
+emitirsom(preguica);
+subirArvore(preguica);
